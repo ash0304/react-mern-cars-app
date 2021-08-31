@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { Button } from '../button';
+import { Marginer } from '../marginer';
 
 const CardContainer = styled.div`
   min-height: 4.3em;
@@ -99,6 +100,7 @@ export function BookCard() {
           <FontAwesomeIcon icon={faCaretUp} />
         </SmallIcon>
       </ItemContainer>
+      <Marginer direction="horizontal" margin="2em" />
       <Button text="Book Your Ride" />
     </CardContainer>
   );

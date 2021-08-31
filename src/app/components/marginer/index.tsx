@@ -8,7 +8,7 @@ export interface IMarginerProps {
 
 const HorizontalMargin = styled.span<IMarginerProps>`
   display: flex;
-  min-height: ${({ margin }) =>
+  min-width: ${({ margin }) =>
     typeof margin === 'string' ? margin : `${margin}px`};
 `;
 
