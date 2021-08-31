@@ -77,7 +77,7 @@ const BlobContainer = styled.div`
   transform: rotate(-30deg);
 
   img {
-    width: 100%auto;
+    width: 100%;
     height: auto;
     max-height: max-content;
   }
