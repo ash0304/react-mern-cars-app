@@ -52,7 +52,7 @@ const SmallIcon = styled.span`
     fill-current
     text-xs
     md:text-base
-    mr-1
+    ml-1
   `}
 `;
 
