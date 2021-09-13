@@ -4,11 +4,11 @@ import tw from 'twin.macro';
 
 interface IButtonProps {
   theme?: 'filled' | 'outlined';
-  text: String;
+  text: string;
   className?: string;
 }
 
-const BaseButton = styled.div`
+const BaseButton = styled.button`
   ${tw`
     pl-5
     pr-5
@@ -27,8 +27,7 @@ const BaseButton = styled.div`
     duration-200
     ease-in-out
     m-1
-    cursor-pointer
-  `}
+  `};
 `;
 
 const OutlinedButton = styled(BaseButton)`
@@ -37,7 +36,7 @@ const OutlinedButton = styled(BaseButton)`
     hover:bg-transparent
     hover:text-red-500
     hover:border-red-500
-  `}
+  `};
 `;
 
 const FilledButton = styled(BaseButton)`
@@ -48,14 +47,13 @@ const FilledButton = styled(BaseButton)`
     hover:bg-red-500
     hover:text-white
     hover:border-transparent
-  `}
+  `};
 `;
 
 export function Button(props: IButtonProps) {
   const { theme, text, className } = props;
-  if (theme === 'filled') {
+
+  if (theme === 'filled')
     return <FilledButton className={className}>{text}</FilledButton>;
-  } else {
-    return <OutlinedButton className={className}>{text}</OutlinedButton>;
-  }
+  else return <OutlinedButton className={className}>{text}</OutlinedButton>;
 }
