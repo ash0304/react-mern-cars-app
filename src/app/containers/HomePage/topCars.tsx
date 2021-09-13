@@ -92,6 +92,14 @@ export function TopCars() {
     gas: 'Petrol',
   };
 
+  const cars = [
+    <Car {...testCar2} />,
+    <Car {...testCar} />,
+    <Car {...testCar2} />,
+    <Car {...testCar} />,
+    <Car {...testCar2} />,
+  ]
+
   return (
     <TopCarsContainer>
       <Title>Explore Our Top Deals</Title>
@@ -104,13 +112,7 @@ export function TopCars() {
         <Carousel
           value={current}
           onChange={setCurrent}
-          slides={[
-            <Car {...testCar2} />,
-            <Car {...testCar} />,
-            <Car {...testCar2} />,
-            <Car {...testCar} />,
-            <Car {...testCar2} />,
-          ]}
+          slides={cars}
           plugins={[
             'clickToChange',
             {
@@ -143,7 +145,7 @@ export function TopCars() {
             },
           }}
         />
-        <Dots value={current} onChange={setCurrent} number={3} />
+        <Dots value={current} onChange={setCurrent} number={cars.length} />
       </CarsContainer>
     </TopCarsContainer>
   );
